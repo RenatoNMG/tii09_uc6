@@ -1,0 +1,16 @@
+<script>
+
+    let totaldenotas = parseInt(prompt("digite o total de notas: "));
+    let soma = 0;
+    let total = 0;
+
+    while(totaldenotas > 0){
+        let nota = parseInt(prompt("digite a nota do aluno"));
+        soma += nota;
+        totaldenotas--;
+        total++;
+    }
+    let media = soma/total;
+
+    console.log("media de notas: "+  media)
+</script>
