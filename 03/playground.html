@@ -1,0 +1,39 @@
+<script>
+    const MAIOR_IDADE = 18;
+    const IDADE_PERMISSAO_TRABALHO = 14;
+    let idade = 17;
+    if(idade >= MAIOR_IDADE){
+        console.log("Entrada Permitida");
+    }else{
+        console.log("Entreda Negada")
+    }
+
+    let diaDaSemana = Number(prompt("Informe o dia da semana de 1 a 7"));
+
+    switch(diaDaSemana){
+        
+        case 1:
+            alert("domingo");
+            break;
+        case 2:
+            alert("segunda");
+            break;
+        case 3:
+            alert("terça");
+            break;
+        case 4:
+            alert("quarta");
+            break;
+        case 5:
+            alert("quinta");
+            break;
+        case 6:
+            alert("sexta");
+            break;
+        case 7:
+            alert("sabado");
+            break;
+            default:
+                alert("numero invalido");
+    }
+</script>
