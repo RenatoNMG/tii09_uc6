@@ -1,0 +1,83 @@
+<script>
+    /*
+    // while
+    
+    let estoque = 10;
+
+    while(estoque > 0){
+        let  qtdCompar = Number(prompt(`temos ${estoque} pães, quantos deseja comprar ?`));
+
+        if (qtdCompar > estoque){
+            alert("quantidade indisponivel")
+        }else{
+        estoque -= qtdCompar;
+        alert(`Compra realizada: restam ${estoque} pães.`);
+        }
+
+    }
+    alert("Estoque zerado. Padaria Fechada!");
+    */
+
+    /*
+    // do while
+  
+    let totalCompra = 0;
+    let preco;
+
+    do{
+        preco = Number(prompt("digite o valor do produto (ou 0 para finalizar)"));
+
+        if(preco > 0){
+            totalCompra += preco;
+            alert(`total atual da compra ${totalCompra}`);
+        }
+    }while(preco !== 0);
+
+    alert(`valor final da compra R$: ${totalCompra}`);
+    */
+
+    /*
+    // for
+
+    let faturamento = [1200,1350,1100,1600,1750,2000];
+
+    for(let dia = 0;dia < faturamento.length;dia++){
+        alert(`dia ${dia + 1}: R$ ${faturamento[dia]}`)
+    }
+    */
+
+    // uso do break e continue
+
+    //break
+    /*
+
+    let mesasDisponiveis = 5;
+
+    while(true){
+        let qtdReserva = Number(prompt("quantas mesas deseja reservar?"));
+
+        if(qtdReserva > mesasDisponiveis){
+            alert("Reserva Indisponivel.");
+        }else{
+            alert(`Reserva confirmada para ${qtdReserva} mesas`)
+            mesasDisponiveis -= qtdReserva;
+            // sair do loop infinito;
+            break;
+        }
+    }
+        */
+
+    // continue
+
+    let pagamentos = [200, -50, 300, 0, 450];
+
+    for(let i = 0;pagamentos.length > i;i++){
+        if(pagamentos[i]<= 0){
+            //alert(`Pagamento ${i + 1} Invalido, Pulando...`);
+            continue;
+        }
+
+        alert(`pagamento ${i + 1} registrado. R$ ${pagamentos[i]}`);
+    }
+
+</script>
