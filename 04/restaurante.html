@@ -1,3 +1,48 @@
 <script>
+
+
+
+    // let carnes = 7;
+    // let arroz = 12;
+    // let feijao = 5;
+    let alimentos = [carnes = 7, arroz = 12, feijao = 5];
+
+    // while
+
+
+    // swtch case
+    for(let i = 0; alimentos.length > i; i++){
+
+    }
+    while(carnes > 0 && arroz > 0 && feijao > 0){
+        let opcao = Number(prompt(`escolha a marmita \n 1-complete \n 2-carnes `));
+
+        switch(opcao) {
+
+    case 1:{
+        carnes--;
+        arroz--;
+        feijao--;
+        alert("Marmita Completa")
+        break;
+    }
     
+    case 2:{
+        carnes -= 2;
+        alert("marnita de Carne ")
+        break;
+    }
+
+    
+    }
+    };
+    if(carnes <= 0){
+        alert("acabou a carne");
+    }else if(arroz <= 0){
+        alert("acabou o arroz");
+    }else if(feijao <= 0){
+        alert("acabou o feijão")
+    }
+
+
 </script>
