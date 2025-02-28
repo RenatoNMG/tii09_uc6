@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.estacionamento{
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+
+.vaga{
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    background: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.ocupado{
+    background-color: red;
+    color: white;
+}
+
+.resumo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: left;
+}
