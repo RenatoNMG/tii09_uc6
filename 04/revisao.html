@@ -1,0 +1,43 @@
+<script>
+    let numeros = [10, 20, 50, 30, 40];
+
+    numeros[2] = 50;
+
+    numeros.push(50); // adiciona ao final
+    numeros.unshift(5); // adiciona ao inicio
+    numeros.pop(); // remove o ultimo elemento
+    numeros.shift(); // remove o primeiro
+    console.log(numeros.indexOf(20)); // local da lista com numero 70
+    let maioresQue20 = numeros.filter(n => n > 20);
+
+    // interando sobre Arrays
+
+    for(let i = 0; i < numeros.length;i++){
+        console.log(`Elementos ${i} ${numeros[i]}`)
+    }
+
+    numeros.forEach(function (valor, i){
+        console.log(`Elementos ${valor} ${i}`);
+    })
+
+    // explicando o forEach
+
+    // array.forEach((Elemento,indice,arrayCompleto) => {
+    //     // codgio a ser executado para cada elemento
+
+    // });
+
+    // Array de Object
+    // produtos = {nome: "noteBook", preco: 4500} // objeto
+
+    let produtos = [
+        {nome: "noteBook", preco: 4500},
+        {nome: "mouse", preco: 100},
+        {nome: "Teclado", preco: 200}
+    ];
+
+    console.log(produtos);
+
+
+
+</script>
