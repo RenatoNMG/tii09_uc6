@@ -43,12 +43,14 @@ class ContaBancaria {
             console.log("valor invalido")
         }
     }
+
+
 }
 
 let novaContaA = new ContaBancaria("0001", "123A");
 let novaContaB = new ContaBancaria("0002", "321A");
 
-novaContaA.trasferir(novaContaB, 20);
 
 console.log(novaContaA.getSaldo("123A"));
 console.log(novaContaB.getSaldo("321A"));
+
