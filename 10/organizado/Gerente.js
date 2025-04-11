@@ -1,4 +1,4 @@
-import { Funcionario } from "./Funcionarios.js";
+import { Funcionario } from './Funcionarios.js';
 
 
 export class Gerente extends Funcionario {
