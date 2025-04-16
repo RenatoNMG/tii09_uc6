@@ -19,6 +19,9 @@ if (produts.length === 0) {
 
          const btnEditar = document.createElement("button");
          btnEditar.textContent = "Editar";
+         btnEditar.onclick = ()=>{
+            window.location.href = `index.html?id=${p.id}`;
+         }
 
         // cria um botão "excluir"
         const btnExcluir = document.createElement("button");

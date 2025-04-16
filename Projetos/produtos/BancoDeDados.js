@@ -14,35 +14,41 @@ export class BancoDeDados {
 
     // READ
     static buscarTodos() {
-        // aramazenar tudo do local sotarege em um array
+        // cria um array de produtos vazio
         const produtos = [];
 
+        // percorre o localStorage buscando todos os dados (JSON)
         for(let i = 0; i < localStorage.length; i++) {
             const chave = localStorage.key(i);
-
-            if(!isNaN(parseInt(chave))){
+            if(!isNaN(parseInt(chave))) {
                 const dados = JSON.parse(localStorage.getItem(chave));
-            
-                produtos.push(Produto.fromJSON(dados));
+                produtos.push(Produto.fromJSON(dados)); // isnere os produtos no array;
             }
         }
 
-        return produtos.sort((a,b) => a.id - b.id);
-
+        // retornar esse array ordenado
+        return produtos.sort((a, b) => a.id - b.id);
     }
 
-    buscarPorId(id) {
-
+    static buscarPorId(id) {
+        const produtoJson = localStorage.getItem(id);
+        const dados = JSON.parse(produtoJson);
+        return Produto.fromJSON(dados);
     }
 
     // UPDATE
-    atualizar(produtoAtualizado) {
-
+    static atualizar(produtoAtualizado) {
+        localStorage.setItem(produtoAtualizado.id, JSON.stringify({
+            id: produtoAtualizado.id,
+            nome: produtoAtualizado.nome,
+            preco: produtoAtualizado.preco,
+            peso: produtoAtualizado.peso,
+            validade: produtoAtualizado.validade
+        }));
     }
 
     //DELETE
     static excluir(id) {
         localStorage.removeItem(id);
-
     }
 }
